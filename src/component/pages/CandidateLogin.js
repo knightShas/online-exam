@@ -1,21 +1,22 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import { useRef } from 'react';
 import axios from "axios";
-import WebsiteNav from '../WebsiteNav';
-import classes from "./company.module.css";
+import WebsiteNav from "../WebsiteNav";
+import classes from "./candidate.module.css";
 
-function CompanyLogin() {
+function CandidateLogin() {
     const redir = useNavigate();
     const emailInputRef = useRef();
     const passwordInputRef = useRef();
+
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "http://localhost:8081/api/company";
+        const baseURL = "http://localhost:8081/api/candidate";
         const enteredEmail = emailInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;
         const data = {
-            compEmail: enteredEmail,
-            compPassword: enteredPassword,
+            userEmail: enteredEmail,
+            userPassword: enteredPassword,
         };
         axios({
             url: baseURL,
@@ -36,8 +37,8 @@ function CompanyLogin() {
             .then((response) => {
                 // console.log(response.data['userEmail']);
                 alert("Login Success");
-                sessionStorage.setItem("CompanyEmail",response.data['compEmail']);
-                sessionStorage.setItem("COMPANY", response.data['compName']);
+                sessionStorage.setItem("CandidateEmail",response.data['userEmail']);
+                sessionStorage.setItem("CANDIDATE", response.data['userName']);
                 sessionStorage.setItem("isLoggedIn", true);
                 redir("/");
             })
@@ -53,26 +54,26 @@ function CompanyLogin() {
             <WebsiteNav />
             <div className="container mt-5">
                 <div className="row">
-                    <div className="col-lg-6">
-                        <img className={classes.image} src="https://img.freepik.com/free-vector/company-concept-illustration_114360-2581.jpg?t=st=1656395681~exp=1656396281~hmac=de60f528bccfefcfa0c08cd3abbc06f4caa48ba92ba1e2d33f14ffcecb35a1e9&w=826" alt="company" />
+                    <div className="col-lg-6 my-5">
+                        <img src="https://img.freepik.com/free-vector/recruit-agent-analyzing-candidates_74855-4565.jpg?t=st=1656396406~exp=1656397006~hmac=8888ff858996f630d0070b0aba5730d596694179914b88a3061eee5a53206c8f&w=1380" alt="candidate" className={classes.image} />
                     </div>
                     <div className="col-sm-6 my-5">
                         <div className="container my-5 p-5">
                             <form onSubmit={submitHandler}>
                                 <div className="mb-3">
-                                    <label htmlFor="CompanyEmail" className="form-label">Email address</label>
-                                    <input type="email" className="form-control" id="CompanyEmail" aria-describedby="emailHelp" ref={emailInputRef} />
+                                    <label htmlFor="userEmail" className="form-label">Email address</label>
+                                    <input type="email" className="form-control" id="userEmail" aria-describedby="emailHelp" ref={emailInputRef} />
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="CompanyPassword" className="form-label">Password</label>
-                                    <input type="password" className="form-control" id="CompanyPassword" ref={passwordInputRef} />
+                                    <label htmlFor="userPassword" className="form-label">Password</label>
+                                    <input type="password" className="form-control" id="userPassword" ref={passwordInputRef} />
                                 </div>
                                 <button className="btn btn-warning">Submit</button>
+                                <br />
+                                <small><span>Need Account <Link className={classes.link} to="/candidate_reg">Candidate</Link></span></small>
+                                <br />
+                                <small><span><Link className={classes.link} to="/">Forgot password</Link></span></small>
                             </form>
-                            <br />
-                            <small><span>Need Account <Link className={classes.link} to="/company_reg">Company</Link></span></small>
-                            <br />
-                            <small><span><a className={classes.link} href="forgot_comp.html">Forgot password</a></span></small>
                         </div>
                     </div>
                 </div>
@@ -80,4 +81,4 @@ function CompanyLogin() {
         </>
     );
 }
-export default CompanyLogin;
+export default CandidateLogin;

@@ -1,0 +1,16 @@
+.mr{
+    margin-top: 5vh;
+}
+
+.ques{
+    padding: 2em;
+    background-color: rgb(232, 234, 234);
+    min-height: 15vh;
+    border-radius: 8px;
+}
+
+.border{
+    margin: 2em;
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 5px;
+}
