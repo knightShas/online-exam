@@ -11,6 +11,7 @@ function Question(props) {
                     tag={quest.tag}
                     question={quest.question}
                     option={quest.option}
+                    answer={quest.answer}
                     />
                 ))}
             </div>
