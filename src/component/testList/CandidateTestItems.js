@@ -5,8 +5,8 @@ function CandidateTestItem(props) {
     const redir = useNavigate();
     const tagRef = useRef(null);
     const timeRef = useRef(null);
-    function handleClick(){
-        if(localStorage.getItem("Test") != null){
+    function handleClick() {
+        if (localStorage.getItem("Test") != null) {
             localStorage.removeItem("Test");
             localStorage.removeItem("Time");
         }
@@ -18,13 +18,19 @@ function CandidateTestItem(props) {
     return (
         <div className="col-lg-12 mt-3">
             <div className="card text-center">
+                <div className="card-header">
+                    <h3 className="card-title">{props.tag}</h3>
+                </div>
                 <div className="card-body">
                     <input type="hidden" id="tag" value={props.tag} ref={tagRef} />
                     <input type="hidden" id="time" value={props.time} ref={timeRef} />
-                    <h3 className="card-title">{props.tag}</h3>
                     <p className="card-text">Subject: {props.subject}</p>
-                    <p className="card-text">No of Questions: {props.noQuestion}</p>
-                    <button className="btn btn-primary" onClick={handleClick}>Select</button>
+                    {/* <p className="card-text">No of Questions: {props.noQuestion}</p> */}
+                    {props.valid ? (
+                        <button className="btn btn-primary" onClick={handleClick}>Select</button>
+                    ) : (
+                        <button className="btn btn-danger disabled">Expired</button>
+                    )}
                 </div>
             </div>
         </div>

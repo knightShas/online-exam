@@ -54,9 +54,9 @@ function CompanyTestItem(props) {
             <td>{props.passmark}</td>
             <td>{props.time} min</td>
             <td>{valid ? (
-                <><input type="hidden" value={props.tag} ref={tagRef} /><button className="btn btn-success mx-1" onClick={handleClick}>Valid</button></>
+                <><input type="hidden" value={props.tag} ref={tagRef} /><button className="btn btn-success mx-1" onClick={handleClick}>Disable</button></>
             ):(
-                <><input type="hidden" value={props.tag} ref={tagRef} /><button className="btn btn-danger mx-1" onClick={handleClick}>Invalid</button></>
+                <><input type="hidden" value={props.tag} ref={tagRef} /><button className="btn btn-danger mx-1" onClick={handleClick}>Enable</button></>
             )
             }
             <input type="hidden" value={props.tag} ref={tagRef}/><button className="btn btn-primary mx-1" onClick={newHandle}>Add Question</button>

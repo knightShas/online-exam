@@ -13,6 +13,7 @@ function CandidateTestList(props) {
                     tag = {test.tag}
                     noQuestion = {test.noQuestion}
                     subject = {test.subject}
+                    valid={test.valid}
                     /> 
                 ))}
             </div>

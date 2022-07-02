@@ -10,6 +10,7 @@ import IndexPage from "./component/pages/IndexPage";
 import Logout from './component/pages/Logout';
 import NewTest from './component/pages/NewTest';
 import QuestionAdd from './component/pages/QuestionAdd';
+import CandidateReport from './component/reports/CandidateReport';
 import QuestionScreen from './component/testScreen/QuestionScreen';
 import TestInfo from './component/testScreen/TestInfo';
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/candidate_reg" element={<CandidateRegister />} />
           <Route path="/Udashboard" element={<CandidateDashboard />} />
           <Route path="/test" element={<QuestionScreen />} />
+          <Route path="/candidate_report" element={<CandidateReport />} />
 
           <Route path="/start" element={<TestInfo />} />
           <Route path="/logout" element={<Logout/>} />
