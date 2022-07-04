@@ -11,6 +11,7 @@ function CandidateTestList(props) {
                     key = {test.id}
                     time = {test.allotTime}
                     tag = {test.tag}
+                    email = {test.compEmail}
                     noQuestion = {test.noQuestion}
                     subject = {test.subject}
                     valid={test.valid}

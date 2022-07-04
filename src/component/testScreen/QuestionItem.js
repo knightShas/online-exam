@@ -14,11 +14,15 @@ function QuestionItem(props) {
     function next() {
         const chosenAnswer = chosenAnswerRef.current.value;
         if (index >= length - 1) {
+            
+            localStorage.setItem("Length_sa",length);
+            localStorage.setItem("Score", score);
             redir("/candidate_report");
             
         }
         if (chosenAnswer === data[index].answer) {
             setScore(score + 1);
+            chosenAnswerRef.current.value = "Select any one";
         }
         setIndex(index + 1);
 

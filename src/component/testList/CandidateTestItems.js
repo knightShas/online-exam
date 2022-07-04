@@ -5,13 +5,16 @@ function CandidateTestItem(props) {
     const redir = useNavigate();
     const tagRef = useRef(null);
     const timeRef = useRef(null);
+    const emailRef = useRef(null);
     function handleClick() {
         if (localStorage.getItem("Test") != null) {
             localStorage.removeItem("Test");
             localStorage.removeItem("Time");
+            localStorage.removeItem("comp_email");
         }
         localStorage.setItem("Test", tagRef.current.value);
         localStorage.setItem("Time", timeRef.current.value);
+        localStorage.setItem("comp_email",emailRef.current.value)
         redir("/start");
     }
 
@@ -24,6 +27,7 @@ function CandidateTestItem(props) {
                 <div className="card-body">
                     <input type="hidden" id="tag" value={props.tag} ref={tagRef} />
                     <input type="hidden" id="time" value={props.time} ref={timeRef} />
+                    <input type="hidden" id="email" value={props.email} ref={emailRef} />
                     <p className="card-text">Subject: {props.subject}</p>
                     {/* <p className="card-text">No of Questions: {props.noQuestion}</p> */}
                     {props.valid ? (
