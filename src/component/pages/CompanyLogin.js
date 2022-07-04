@@ -42,7 +42,7 @@ function CompanyLogin() {
                 redir("/");
             })
             .catch((error) => {
-                alert("Error");
+                alert(error.response.data);
             });
 
         emailInputRef.current.value = "";

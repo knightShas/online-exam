@@ -43,7 +43,8 @@ function CandidateLogin() {
                 redir("/");
             })
             .catch((error) => {
-                alert("Error");
+                // console.log();
+                alert(error.response.data);
             });
 
         emailInputRef.current.value = "";

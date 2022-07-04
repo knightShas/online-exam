@@ -14,7 +14,7 @@ function CompanyRegister() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "http://localhost:8081/api/company/add";
+        const baseURL = "http://localhost:8081/api/company/newcompany";
         const enteredName = userInputRef.current.value;
         const enteredEmail = emailInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;

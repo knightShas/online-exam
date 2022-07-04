@@ -7,7 +7,7 @@ function QuestionItem(props) {
     const [index, setIndex] = useState(0);
     const length = props.data.length;
     const data = props.data;
-    const [feedback, setfeedback] = useState();
+    // const [feedback, setfeedback] = useState();
     const chosenAnswerRef = useRef();
     const [score, setScore] = useState(0);
 
@@ -58,7 +58,6 @@ function QuestionItem(props) {
                 <div className="col-sm-3 me-auto d-grid gap-2">
                     <button type="button" className="btn btn-lg btn-success ms-4" onClick={next}>Next</button>
                 </div>
-                {feedback}
             </div>
         </>
 
