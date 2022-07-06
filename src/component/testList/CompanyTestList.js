@@ -9,9 +9,9 @@ function CompanyTestList(props) {
             <th scope="col">Tag</th>
             <th scope="col">Subject</th>
             <th scope="col">Type</th>
-            <th scope="col">No of question</th>
-            <th scope="col">Passmark</th>
-            <th scope="col">Time</th>
+            {/* <th scope="col">No of question</th> */}
+            {/* <th scope="col">Passmark</th> */}
+            {/* <th scope="col">Time</th> */}
             <th scope="col">Action</th>
           </tr>
         </thead>

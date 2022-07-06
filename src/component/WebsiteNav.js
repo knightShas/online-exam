@@ -23,7 +23,7 @@ function WebsiteNav() {
                                 <Link className="nav-link" to="/Udashboard">Dashboard</Link>
                             </li>
                         </ul>
-                        <ul class="navbar-nav ms-auto">
+                        <ul className="navbar-nav ms-auto">
                             <li className="nav-item" id="com_link">
                                 <b><Link className="nav-link" style={{ color: "green" }} to="#">{candiName}</Link></b>
                             </li>
@@ -54,7 +54,7 @@ function WebsiteNav() {
                                 <Link className="nav-link" to="/Cdashboard">Dashboard</Link>
                             </li>
                         </ul>
-                        <ul class="navbar-nav ms-auto">
+                        <ul className="navbar-nav ms-auto">
                             <li className="nav-item" id="com_link">
                                 <b><Link className="nav-link" style={{ color: "green" }} to="#">{compName}</Link></b>
                             </li>

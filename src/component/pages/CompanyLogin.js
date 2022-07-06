@@ -38,6 +38,7 @@ function CompanyLogin() {
                 alert("Login Success");
                 sessionStorage.setItem("CompanyEmail",response.data['compEmail']);
                 sessionStorage.setItem("COMPANY", response.data['compName']);
+                sessionStorage.setItem("loggedInFor","company");
                 sessionStorage.setItem("isLoggedIn", true);
                 redir("/");
             })

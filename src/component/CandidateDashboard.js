@@ -7,6 +7,7 @@ class CandidateDashboard extends Component {
         allTest: [],
     };
     async componentDidMount() {
+    localStorage.clear();
     const response = await fetch("http://localhost:8081/test/all");
     const body = await response.json();
     console.log(body);

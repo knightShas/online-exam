@@ -12,7 +12,7 @@ function QuestionItem(props) {
     const [score, setScore] = useState(0);
 
     function next() {
-        const chosenAnswer = chosenAnswerRef.current.value;
+        let chosenAnswer = chosenAnswerRef.current.value;
         if (index >= length - 1) {
             
             localStorage.setItem("Length_sa",length);
@@ -22,10 +22,9 @@ function QuestionItem(props) {
         }
         if (chosenAnswer === data[index].answer) {
             setScore(score + 1);
-            chosenAnswerRef.current.value = "Select any one";
         }
         setIndex(index + 1);
-
+        chosenAnswerRef.current.value = "Select any one";
 
     }
     function opt(i) {
@@ -42,7 +41,7 @@ function QuestionItem(props) {
                         <div className="col-sm-10 my-4">
                             <div className="card-body">
                                 <select className="form-control" ref={chosenAnswerRef}>
-                                    <option>Select any one</option>
+                                    <option value="Select any one">Select any one</option>
                                     <option value={i.option.option1}>{i.option.option1}</option>
                                     <option value={i.option.option2}>{i.option.option2}</option>
                                     <option value={i.option.option3}>{i.option.option3}</option>

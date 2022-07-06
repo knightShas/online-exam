@@ -5,7 +5,10 @@ import WebsiteNav from "../WebsiteNav";
 function TestInfo() {
     const redir = useNavigate();
     const testName = localStorage.getItem("Test");
-
+    const page = localStorage.getItem("page");
+    if(page === "report"){
+        redir("/candidate_report");
+    }
     function handleClick(){
         redir("/test");
     }

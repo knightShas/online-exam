@@ -26,19 +26,12 @@ function CandidateLogin() {
             },
             data: data,
         })
-        // fetch(baseURL, {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify(data),
-        // })
-
             .then((response) => {
                 // console.log(response.data['userEmail']);
                 alert("Login Success");
                 sessionStorage.setItem("CandidateEmail",response.data['userEmail']);
                 sessionStorage.setItem("CANDIDATE", response.data['userName']);
+                sessionStorage.setItem("loggedInFor", "candidate");
                 sessionStorage.setItem("isLoggedIn", true);
                 redir("/");
             })
