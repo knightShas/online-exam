@@ -13,7 +13,7 @@ function QuestionItem(props) {
 
     function next() {
         let chosenAnswer = chosenAnswerRef.current.value;
-        if (index >= length - 1) {
+        if (index === length - 1) {
             
             localStorage.setItem("Length_sa",length);
             localStorage.setItem("Score", score);
