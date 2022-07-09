@@ -10,7 +10,7 @@ class CandidateDashboard extends Component {
     localStorage.clear();
     const response = await fetch("http://localhost:8081/test/all");
     const body = await response.json();
-    console.log(body);
+    // console.log(body);
     this.setState({ allTest: body });
     }
     render() {

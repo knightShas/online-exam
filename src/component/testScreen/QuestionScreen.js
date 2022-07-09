@@ -11,7 +11,7 @@ class QuestionScreen extends Component{
         const testName = localStorage.getItem("Test");
             const response = await fetch("http://localhost:8081/test/question/"+testName);
             const body = await response.json();
-            console.log(body);
+            // console.log(body);
             this.setState({ allQuestion: body, isLoaded:true });
             }
         // }
