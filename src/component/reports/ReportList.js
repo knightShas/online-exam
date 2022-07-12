@@ -58,7 +58,7 @@ function ReportList(props){
                     userEmail = {item.userEmail}
                     tag = {item.tag}
                     score = {item.score}
-                    total = {item.score}
+                    total = {item.total}
                     remark = {item.remark}
                     />
                 ))}

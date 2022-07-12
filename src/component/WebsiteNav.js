@@ -22,6 +22,9 @@ function WebsiteNav() {
                             <li className="nav-item" id="com_link">
                                 <Link className="nav-link" to="/Udashboard">Dashboard</Link>
                             </li>
+                            <li className="nav-item" id="com_link">
+                                <Link className="nav-link" to="/report">Report</Link>
+                            </li>
                         </ul>
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item" id="com_link">
@@ -52,6 +55,9 @@ function WebsiteNav() {
                             </li>
                             <li className="nav-item" id="com_link">
                                 <Link className="nav-link" to="/Cdashboard">Dashboard</Link>
+                            </li>
+                            <li className="nav-item" id="com_link">
+                                <Link className="nav-link" to="/report">Report</Link>
                             </li>
                         </ul>
                         <ul className="navbar-nav ms-auto">

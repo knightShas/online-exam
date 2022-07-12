@@ -13,14 +13,19 @@ function QuestionItem(props) {
 
     function next() {
         let chosenAnswer = chosenAnswerRef.current.value;
-        if (index >= length - 1) {
-            
+        // console.log(chosenAnswer);
+        if (index === length - 1) {
+            if (chosenAnswer === data[index].answer) {
+                localStorage.setItem("Score", score+1);
+            }
+            else{
+                localStorage.setItem("Score", score);
+            }
             localStorage.setItem("Length_sa",length);
-            localStorage.setItem("Score", score);
             redir("/candidate_report");
             
         }
-        if (chosenAnswer === data[index].answer) {
+        if (chosenAnswer === data[index].answer && index < length - 1) {
             setScore(score + 1);
         }
         setIndex(index + 1);
