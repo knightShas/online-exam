@@ -10,7 +10,7 @@ function CompanyLogin() {
     const passwordInputRef = useRef();
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "http://localhost:8081/api/company";
+        const baseURL = "https://spring-online-exam.herokuapp.com/api/company";
         const enteredEmail = emailInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;
         const data = {

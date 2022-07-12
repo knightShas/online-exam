@@ -14,7 +14,7 @@ function CandidateRegister() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "http://localhost:8081/api/candidate/newcandidate";
+        const baseURL = "https://spring-online-exam.herokuapp.com/api/candidate/newcandidate";
         const enteredName = userInputRef.current.value;
         const enteredEmail = emailInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;

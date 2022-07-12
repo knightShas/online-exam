@@ -14,7 +14,7 @@ function NewTest() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "http://localhost:8081/test/newtest";
+        const baseURL = "https://spring-online-exam.herokuapp.com/test/newtest";
         const enteredTag = tagInputRef.current.value;
         const enteredSubject = subjectInputRef.current.value;
         const enteredTime = timeInputRef.current.value;

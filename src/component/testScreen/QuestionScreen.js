@@ -9,7 +9,7 @@ class QuestionScreen extends Component{
     };
     async componentDidMount() {
         const testName = localStorage.getItem("Test");
-            const response = await fetch("http://localhost:8081/test/question/"+testName);
+            const response = await fetch("https://spring-online-exam.herokuapp.com/test/question/"+testName);
             const body = await response.json();
             console.log(body);
             this.setState({ allQuestion: body, isLoaded:true });

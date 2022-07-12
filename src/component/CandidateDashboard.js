@@ -8,7 +8,7 @@ class CandidateDashboard extends Component {
     };
     async componentDidMount() {
     localStorage.clear();
-    const response = await fetch("http://localhost:8081/test/all");
+    const response = await fetch("https://spring-online-exam.herokuapp.com/test/all");
     const body = await response.json();
     console.log(body);
     this.setState({ allTest: body });

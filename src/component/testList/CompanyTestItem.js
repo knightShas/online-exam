@@ -20,7 +20,7 @@ function CompanyTestItem(props) {
             tag: tag,
             valid: valid
         }
-            const url="http://localhost:8081/test/company_test";
+            const url="https://spring-online-exam.herokuapp.com/test/company_test";
             axios({
                 url: url,
                 method: "PUT",
