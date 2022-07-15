@@ -10,11 +10,11 @@ function ReportList(props){
             <table className="table">
             <thead>
               <tr>
-                <th scope="col">Tag</th>
-                <th scope="col">Canidate Email</th>
-                <th scope="col">Marks Score</th>
-                <th scope="col">Total</th>
-                <th scope="col">Remark</th>
+                <th scope="col" style={{color:'rgb(34 99 118)'}}>Tag</th>
+                <th scope="col"  style={{color:'rgb(34 99 118)'}}>Canidate Email</th>
+                <th scope="col"  style={{color:'rgb(34 99 118)'}}>Marks Score</th>
+                <th scope="col"  style={{color:'rgb(34 99 118)'}}>Total</th>
+                <th scope="col"  style={{color:'rgb(34 99 118)'}}>Remark</th>
               </tr>
             </thead>
             <tbody>
@@ -44,10 +44,10 @@ function ReportList(props){
             <table className="table">
             <thead>
               <tr>
-                <th scope="col">Tag</th>
-                <th scope="col">Marks Score</th>
-                <th scope="col">Total</th>
-                <th scope="col">Remark</th>
+                <th scope="col"  style={{color:'rgb(34 99 118)'}}>Tag</th>
+                <th scope="col"  style={{color:'rgb(34 99 118)'}}>Marks Score</th>
+                <th scope="col"  style={{color:'rgb(34 99 118)'}}>Total</th>
+                <th scope="col"  style={{color:'rgb(34 99 118)'}}>Remark</th>
               </tr>
             </thead>
             <tbody>
