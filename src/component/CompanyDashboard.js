@@ -8,7 +8,7 @@ class CompanyDashboard extends Component {
         allTest: [],
     };
     async componentDidMount() {
-        const response = await fetch("http://localhost:8081/test/company/" + sessionStorage.getItem("CompanyEmail"));
+        const response = await fetch("https://ec2-18-237-25-215.us-west-2.compute.amazonaws.com:80/test/company/" + sessionStorage.getItem("CompanyEmail"));
         const body = await response.json();
         // console.log(body);
         this.setState({ allTest: body });

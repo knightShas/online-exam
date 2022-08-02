@@ -14,7 +14,7 @@ function QuestionAdd() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "http://localhost:8081/test/question/newquestion";
+        const baseURL = "https://ec2-18-237-25-215.us-west-2.compute.amazonaws.com:80/test/question/newquestion";
         const enteredQuestion = questionInputRef.current.value;
         const enteredOption1 = opt1InputRef.current.value;
         const enteredOption2 = opt2InputRef.current.value;

@@ -20,7 +20,7 @@ function CompanyTestItem(props) {
             tag: tag,
             valid: valid
         }
-            const url="http://localhost:8081/test/company_test";
+            const url="https://ec2-18-237-25-215.us-west-2.compute.amazonaws.com:80/test/company_test";
             axios({
                 url: url,
                 method: "PUT",

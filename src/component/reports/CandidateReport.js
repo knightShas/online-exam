@@ -7,7 +7,7 @@ function CandidateReport() {
     if (length != null && score != null) {
         localStorage.setItem("page", "report");
     }
-    const baseURL = "http://localhost:8081/api/report";
+    const baseURL = "https://ec2-18-237-25-215.us-west-2.compute.amazonaws.com:80/api/report";
     const data = {
         compEmail: localStorage.getItem("comp_email"),
         userEmail: sessionStorage.getItem("CandidateEmail"),
