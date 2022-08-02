@@ -3,7 +3,9 @@ function Logout(){
     sessionStorage.clear();
     localStorage.clear();
     return(
-        <Navigate to="/" />
+        <>
+            <Navigate to="/" />
+        </>
     );
 }
 export default Logout;
