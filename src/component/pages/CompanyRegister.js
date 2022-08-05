@@ -14,7 +14,7 @@ function CompanyRegister() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "https://ec2-18-237-25-215.us-west-2.compute.amazonaws.com:80/api/company/newcompany";
+        const baseURL = "https://ec2-35-88-117-254.us-west-2.compute.amazonaws.com:8081/api/company/newcompany";
         const enteredName = userInputRef.current.value;
         const enteredEmail = emailInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;

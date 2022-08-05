@@ -11,7 +11,7 @@ function CandidateLogin() {
 
     async function submitHandler(event) {
         event.preventDefault();
-        const baseURL = "https://ec2-18-237-25-215.us-west-2.compute.amazonaws.com:80/api/candidate";
+        const baseURL = "https://ec2-35-88-117-254.us-west-2.compute.amazonaws.com:8081/api/candidate";
         const enteredEmail = emailInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;
         const data = {
